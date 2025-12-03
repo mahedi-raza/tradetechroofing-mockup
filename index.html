@@ -1,0 +1,4708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradetech Roofing Limited | Expert Roofers in Glasgow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #D64933;
+            --primary-dark: #B83A28;
+            --secondary: #1B2838;
+            --accent: #E8B923;
+            --dark: #0D1117;
+            --light: #F7F8FA;
+            --white: #ffffff;
+            --cream: #FDF6E3;
+            --gradient-fire: linear-gradient(135deg, #D64933 0%, #FF6B4A 50%, #D64933 100%);
+            --gradient-gold: linear-gradient(135deg, #E8B923 0%, #F4D03F 50%, #E8B923 100%);
+            --gradient-dark: linear-gradient(135deg, #1B2838 0%, #2C3E50 100%);
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --shadow-heavy: 0 30px 80px rgba(0, 0, 0, 0.2);
+            --shadow-glow: 0 0 60px rgba(214, 73, 51, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Premium Top Bar */
+        .top-bar {
+            background: var(--dark);
+            color: white;
+            padding: 0.6rem 5%;
+            font-size: 0.85rem;
+        }
+
+        .top-bar-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .top-bar-left span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .top-bar-left i {
+            color: var(--primary);
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .top-bar-right a {
+            color: white;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+
+        .top-bar-right a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 0.8rem 5%;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar.scrolled {
+            padding: 0.6rem 5%;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .logo-main .trade {
+            color: var(--primary);
+        }
+
+        .logo-main .tech {
+            color: var(--secondary);
+        }
+
+        .logo-sub {
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: #888;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a:not(.nav-cta) {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:not(.nav-cta)::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-fire);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-links a:not(.nav-cta):hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:not(.nav-cta):hover::before {
+            width: 100%;
+        }
+
+        a.nav-cta {
+            background: var(--gradient-fire) !important;
+            color: white !important;
+            padding: 14px 28px !important;
+            margin-left: 15px !important;
+            border-radius: 100px !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            font-size: 0.95rem !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 8px 25px rgba(214,73,51,0.35) !important;
+            transition: all 0.3s ease !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 10px !important;
+            border: none !important;
+            white-space: nowrap !important;
+            position: relative !important;
+        }
+
+        a.nav-cta i {
+            font-size: 0.9rem !important;
+        }
+
+        a.nav-cta::before {
+            display: none !important;
+        }
+
+        a.nav-cta:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 12px 30px rgba(214, 73, 51, 0.5) !important;
+            background: linear-gradient(135deg, #B83A28 0%, #D64933 100%);
+        }
+
+        /* Ultra Premium Magnetic Cursor */
+        .cursor-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            overflow: hidden;
+        }
+
+        .cursor {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            background: conic-gradient(from 0deg,
+                    rgba(214, 73, 51, 0.9),
+                    rgba(255, 180, 50, 0.9),
+                    rgba(214, 73, 51, 0.9));
+            transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                height 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                background 0.3s ease,
+                opacity 0.3s ease;
+            animation: cursor-rotate 3s linear infinite;
+        }
+
+        @keyframes cursor-rotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .cursor::before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: #0d0d0d;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .cursor::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg,
+                    rgba(214, 73, 51, 0.5),
+                    transparent,
+                    rgba(255, 180, 50, 0.5),
+                    transparent,
+                    rgba(214, 73, 51, 0.5));
+            z-index: -1;
+            animation: cursor-glow 2s ease-in-out infinite;
+            filter: blur(10px);
+        }
+
+        @keyframes cursor-glow {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10001;
+            transform: translate(-50%, -50%);
+            box-shadow:
+                0 0 15px rgba(214, 73, 51, 1),
+                0 0 30px rgba(214, 73, 51, 0.8),
+                0 0 50px rgba(214, 73, 51, 0.4);
+            transition: transform 0.15s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+        }
+
+        .cursor.hover {
+            width: 80px;
+            height: 80px;
+            background: conic-gradient(from 0deg,
+                    rgba(214, 73, 51, 1),
+                    rgba(255, 180, 50, 1),
+                    rgba(214, 73, 51, 1));
+            animation: cursor-rotate 1.5s linear infinite;
+        }
+
+        .cursor.hover::after {
+            filter: blur(18px);
+            inset: -10px;
+        }
+
+        .cursor-dot.hover {
+            width: 12px;
+            height: 12px;
+            transform: translate(-50%, -50%);
+            box-shadow:
+                0 0 20px rgba(255, 255, 255, 1),
+                0 0 40px rgba(214, 73, 51, 1),
+                0 0 80px rgba(214, 73, 51, 0.6);
+        }
+
+        .cursor.clicking {
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+
+        /* Premium Click Burst Effect */
+        .cursor-burst {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 9997;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor-burst-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: burst-particle 0.8s ease-out forwards;
+        }
+
+        .cursor-burst-particle:nth-child(1) {
+            background: var(--primary);
+            --angle: 0deg;
+        }
+
+        .cursor-burst-particle:nth-child(2) {
+            background: var(--accent);
+            --angle: 45deg;
+        }
+
+        .cursor-burst-particle:nth-child(3) {
+            background: var(--primary);
+            --angle: 90deg;
+        }
+
+        .cursor-burst-particle:nth-child(4) {
+            background: var(--accent);
+            --angle: 135deg;
+        }
+
+        .cursor-burst-particle:nth-child(5) {
+            background: var(--primary);
+            --angle: 180deg;
+        }
+
+        .cursor-burst-particle:nth-child(6) {
+            background: var(--accent);
+            --angle: 225deg;
+        }
+
+        .cursor-burst-particle:nth-child(7) {
+            background: var(--primary);
+            --angle: 270deg;
+        }
+
+        .cursor-burst-particle:nth-child(8) {
+            background: var(--accent);
+            --angle: 315deg;
+        }
+
+        @keyframes burst-particle {
+            0% {
+                transform: translate(-50%, -50%) rotate(var(--angle)) translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(var(--angle)) translateY(70px) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Magnetic Glow Trail */
+        .cursor-glow-trail {
+            position: fixed;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(214, 73, 51, 0.6) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 9996;
+            transform: translate(-50%, -50%);
+            animation: glow-trail 0.7s ease-out forwards;
+            filter: blur(4px);
+        }
+
+        @keyframes glow-trail {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(2.5);
+            }
+        }
+
+        /* Ring ripple on click */
+        .cursor-ring {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9995;
+            transform: translate(-50%, -50%) scale(0);
+            animation: ring-expand 0.7s ease-out forwards;
+        }
+
+        .cursor-ring-secondary {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9994;
+            transform: translate(-50%, -50%) scale(0);
+            animation: ring-expand 0.9s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+
+        @keyframes ring-expand {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Hide default cursor */
+        body,
+        * {
+            cursor: none !important;
+        }
+
+        /* Premium Preloader - Roof Animation */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0D1117 0%, #1B2838 100%);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            overflow: hidden;
+        }
+
+        .preloader::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(214, 73, 51, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+        }
+
+        .preloader.loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .preloader-roof {
+            width: 120px;
+            height: 60px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .roof-shape {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 40px solid var(--primary);
+            position: relative;
+            animation: roof-build 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes roof-build {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .roof-base {
+            width: 100px;
+            height: 30px;
+            background: var(--primary);
+            margin: 0 auto;
+            border-radius: 0 0 8px 8px;
+            animation: base-build 1s ease-out 0.3s forwards;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+
+        @keyframes base-build {
+            0% {
+                transform: scaleY(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+
+        .preloader-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            animation: fade-up 0.8s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fade-up {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .preloader-logo .trade {
+            color: var(--primary);
+        }
+
+        .preloader-logo .tech {
+            color: white;
+        }
+
+        .preloader-dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            animation: fade-up 0.8s ease-out 0.9s forwards;
+            opacity: 0;
+        }
+
+        .preloader-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: dot-bounce 1.4s ease-in-out infinite;
+        }
+
+        .preloader-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .preloader-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes dot-bounce {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0.6);
+                opacity: 0.5;
+            }
+
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .preloader-text {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: fade-up 0.8s ease-out 1.2s forwards;
+            opacity: 0;
+        }
+
+        /* Hero Section - Cinematic Split Design */
+        .hero {
+            margin-top: 70px;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            background: var(--secondary);
+            padding: 6rem 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 100%;
+            background: linear-gradient(to left, rgba(27, 40, 56, 0) 0%, var(--secondary) 100%);
+            z-index: 3;
+        }
+
+        .hero-left::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(214, 73, 51, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            visibility: visible !important;
+            animation: none !important;
+            transition: none !important;
+        }
+
+        .hero-right:hover img {
+            transition: transform 6s ease !important;
+            transform: scale(1.03) !important;
+        }
+
+        /* Ensure hero content is visible immediately */
+        .hero-content,
+        .hero-label,
+        .hero-text,
+        .hero-stats,
+        .hero-buttons,
+        .emergency-float {
+            opacity: 1 !important;
+            transform: none !important;
+            animation-delay: 0s !important;
+        }
+
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--secondary) 0%, transparent 30%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(214, 73, 51, 0.15);
+            border: 1px solid rgba(214, 73, 51, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-label i {
+            font-size: 0.8rem;
+        }
+
+        .hero-text h1 {
+            font-size: 4.2rem;
+            color: white;
+            font-weight: 800;
+            line-height: 1.08;
+            margin-bottom: 1.8rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-text h1 span {
+            display: block;
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 2.5rem;
+            line-height: 1.9;
+            max-width: 520px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-number span {
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-fire);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 15px 40px rgba(214, 73, 51, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(214, 73, 51, 0.5);
+            background: linear-gradient(135deg, #B83A28 0%, #D64933 100%);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: white;
+            transition: width 0.4s;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::before {
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            color: var(--primary);
+            border-color: white;
+            transform: translateY(-4px);
+        }
+
+        /* Floating Emergency Card */
+        .emergency-float {
+            position: absolute;
+            bottom: 8%;
+            right: 8%;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-heavy);
+            z-index: 10;
+            min-width: 320px;
+            transform: translateY(0);
+            animation: floatCard 4s ease-in-out infinite;
+        }
+
+        @keyframes floatCard {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .emergency-float-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .emergency-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-fire);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .emergency-float-header h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .emergency-float-header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .emergency-call-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--gradient-fire);
+            color: white;
+            padding: 1rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .emergency-call-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(214, 73, 51, 0.4);
+        }
+
+        /* Brands Strip */
+        .brands-section {
+            padding: 0;
+            background: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .brands-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            min-width: 200px;
+        }
+
+        .brand-logo:last-child {
+            border-right: none;
+        }
+
+        .brand-logo:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .brand-logo img {
+            height: 35px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+
+        .brand-logo:hover img {
+            opacity: 1;
+        }
+
+        .brand-logo span {
+            font-weight: 700;
+            color: white;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Services Section - Bento Grid Style */
+        .services {
+            padding: 10rem 5%;
+            background: white;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: transparent;
+            color: var(--primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--primary);
+        }
+
+        .section-header h2 {
+            font-size: 3.8rem;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.9;
+        }
+
+        .services-bento {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 380px);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            position: relative;
+            border-radius: 28px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card:nth-child(1) {
+            grid-column: span 5;
+        }
+
+        .service-card:nth-child(2) {
+            grid-column: span 4;
+        }
+
+        .service-card:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        .service-card:nth-child(4) {
+            grid-column: span 3;
+        }
+
+        .service-card:nth-child(5) {
+            grid-column: span 5;
+        }
+
+        .service-card:nth-child(6) {
+            grid-column: span 4;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 17, 23, 0.95) 0%, rgba(13, 17, 23, 0.4) 50%, transparent 100%);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: all 0.4s;
+        }
+
+        .service-card:hover .service-overlay {
+            background: linear-gradient(to top, rgba(214, 73, 51, 0.9) 0%, rgba(214, 73, 51, 0.5) 50%, transparent 100%);
+        }
+
+        .service-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            line-height: 1;
+        }
+
+        .service-overlay h3 {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            transform: translateY(20px);
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover .service-overlay h3 {
+            transform: translateY(0);
+        }
+
+        .service-overlay p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s 0.1s;
+            max-width: 90%;
+        }
+
+        .service-card:hover .service-overlay p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: 700;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s 0.2s;
+            text-decoration: none;
+        }
+
+        .service-card:hover .service-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-link i {
+            transition: transform 0.3s;
+        }
+
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* About Section - Magazine Layout */
+        .about {
+            padding: 10rem 5%;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: 'ROOFING';
+            position: absolute;
+            top: 50%;
+            left: -5%;
+            transform: translateY(-50%) rotate(-90deg);
+            font-family: 'Playfair Display', serif;
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.03);
+            letter-spacing: 20px;
+            white-space: nowrap;
+        }
+
+        .about-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 650px;
+            object-fit: cover;
+            border-radius: 0 100px 0 100px;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .about-img-float {
+            position: absolute;
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: var(--shadow-heavy);
+            bottom: -60px;
+            right: -60px;
+            border: 8px solid var(--cream);
+            z-index: 3;
+        }
+
+        .about-experience {
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            background: var(--gradient-fire);
+            color: white;
+            padding: 2rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-glow);
+            z-index: 4;
+            text-align: center;
+        }
+
+        .about-experience .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            display: block;
+        }
+
+        .about-experience .text {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.3rem;
+        }
+
+        .about-content {
+            padding-left: 2rem;
+        }
+
+        .about-content h2 {
+            font-size: 3.5rem;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .about-content h2 span {
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        .about-content>p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.8rem;
+            margin: 3rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 18px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-fire);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(214, 73, 51, 0.25);
+        }
+
+        .feature-icon i {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .feature-text h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Reviews Section - Ultra Premium */
+        .reviews {
+            padding: 10rem 5%;
+            background: linear-gradient(135deg, #0D1117 0%, #1B2838 50%, #0D1117 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 0%, rgba(214, 73, 51, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(232, 185, 35, 0.1) 0%, transparent 50%);
+        }
+
+        .reviews::after {
+            content: '"';
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            font-family: 'Playfair Display', serif;
+            font-size: 30rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.02);
+            line-height: 1;
+        }
+
+        .reviews-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviews .section-label {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--accent);
+        }
+
+        .reviews .section-header h2 {
+            color: white;
+        }
+
+        .reviews .section-header p {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .reviews-showcase {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 5rem;
+        }
+
+        .reviews-stats {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 120px;
+            backdrop-filter: blur(20px);
+        }
+
+        .google-logo {
+            width: 120px;
+            height: 40px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-logo img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .google-logo i {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #4285f4, #34a853, #fbbc05, #ea4335);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reviews-rating {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+            text-shadow: 0 0 60px rgba(232, 185, 35, 0.3);
+        }
+
+        .reviews-stars {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin: 1rem 0;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(232, 185, 35, 0.5);
+        }
+
+        .reviews-count {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .reviews-location {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .reviews-location i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 900;
+            color: rgba(214, 73, 51, 0.1);
+            line-height: 1;
+        }
+
+        .review-card:hover {
+            background: linear-gradient(145deg, rgba(214, 73, 51, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            transform: translateY(-8px);
+            border-color: rgba(214, 73, 51, 0.3);
+            box-shadow: 0 20px 60px rgba(214, 73, 51, 0.15);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-fire);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 8px 20px rgba(214, 73, 51, 0.3);
+        }
+
+        .reviewer-info h4 {
+            font-family: 'DM Sans', sans-serif;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+        }
+
+        .review-text {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .review-meta {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .review-meta i {
+            color: #4285f4;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 10rem 5%;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=1920') center/cover;
+            opacity: 0.1;
+        }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .video-wrapper {
+            position: relative;
+            aspect-ratio: 16/9;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .video-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-fire);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 0 0 20px rgba(214, 73, 51, 0.2), 0 0 0 40px rgba(214, 73, 51, 0.1);
+        }
+
+        .video-play-btn i {
+            font-size: 2rem;
+            color: white;
+            margin-left: 5px;
+        }
+
+        .video-play-btn:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 0 25px rgba(214, 73, 51, 0.3), 0 0 0 50px rgba(214, 73, 51, 0.15);
+        }
+
+        .video-title {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .video-title h3 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .video-title p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1rem;
+        }
+
+        /* What We Do Section - Premium Cards */
+        .what-we-do {
+            padding: 10rem 5%;
+            background: linear-gradient(180deg, white 0%, var(--light) 100%);
+        }
+
+        .whatwedo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .whatwedo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .whatwedo-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .whatwedo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-fire);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .whatwedo-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .whatwedo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(214, 73, 51, 0.15);
+            border-color: rgba(214, 73, 51, 0.2);
+        }
+
+        .whatwedo-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatwedo-card:hover .whatwedo-icon {
+            background: var(--gradient-fire);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(214, 73, 51, 0.3);
+        }
+
+        .whatwedo-icon img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: all 0.4s;
+        }
+
+        .whatwedo-card:hover .whatwedo-icon img {
+            filter: brightness(0) invert(1);
+        }
+
+        .whatwedo-card h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .whatwedo-card:hover h3 {
+            color: var(--primary);
+        }
+
+        .whatwedo-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Process Section - Timeline Style */
+        .process {
+            padding: 10rem 5%;
+            background: var(--light);
+            position: relative;
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-timeline {
+            margin-top: 5rem;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 4px;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .process-step:nth-child(even) .step-content {
+            order: 2;
+            text-align: left;
+        }
+
+        .process-step:nth-child(even) .step-visual {
+            order: 1;
+        }
+
+        .step-content {
+            text-align: right;
+            padding: 2rem;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-fire);
+            border-radius: 50%;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .step-content h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        .step-visual {
+            position: relative;
+        }
+
+        .step-visual img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .step-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        /* Did You Know Section - Premium Grid */
+        .did-you-know {
+            padding: 10rem 5%;
+            background: linear-gradient(135deg, #FDF8F3 0%, #FFF9F5 100%);
+            position: relative;
+        }
+
+        .did-you-know::before {
+            content: '?';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            font-family: 'Playfair Display', serif;
+            font-size: 20rem;
+            font-weight: 900;
+            color: rgba(214, 73, 51, 0.03);
+            line-height: 1;
+        }
+
+        .dyk-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dyk-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .dyk-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dyk-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at top right, rgba(214, 73, 51, 0.08) 0%, transparent 70%);
+        }
+
+        .dyk-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(214, 73, 51, 0.12);
+        }
+
+        .dyk-number {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-fire);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(214, 73, 51, 0.25);
+            transition: all 0.4s;
+        }
+
+        .dyk-card:hover .dyk-number {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .dyk-content h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .dyk-card:hover .dyk-content h4 {
+            color: var(--primary);
+        }
+
+        .dyk-content p {
+            color: #777;
+            line-height: 1.7;
+            font-size: 0.92rem;
+        }
+
+        /* Areas Section - Premium Location Cards */
+        .areas {
+            padding: 10rem 5%;
+            background: linear-gradient(135deg, #1B2838 0%, #0D1117 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .areas::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 0%, rgba(214, 73, 51, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 100%, rgba(232, 185, 35, 0.08) 0%, transparent 50%);
+        }
+
+        .areas-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .areas .section-label {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: var(--accent);
+        }
+
+        .areas .section-header h2 {
+            color: white;
+        }
+
+        .areas .section-header p {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            margin-top: 4rem;
+        }
+
+        .area-card {
+            position: relative;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .area-card:nth-child(1),
+        .area-card:nth-child(7) {
+            grid-column: span 2;
+        }
+
+        .area-card-bg {
+            position: absolute;
+            inset: 0;
+            transition: transform 0.6s ease, filter 0.4s ease;
+        }
+
+        .area-card:hover .area-card-bg {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .area-card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.15);
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+
+        .area-card:hover .area-card-icon {
+            font-size: 3.5rem;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+            z-index: 2;
+            transition: background 0.4s;
+        }
+
+        .area-card:hover::before {
+            background: linear-gradient(to top, rgba(214, 73, 51, 0.9) 0%, rgba(214, 73, 51, 0.3) 50%, transparent 100%);
+        }
+
+        .area-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            transition: border-color 0.4s;
+            z-index: 4;
+        }
+
+        .area-card:hover::after {
+            border-color: var(--primary);
+        }
+
+        .area-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.2rem;
+            z-index: 3;
+        }
+
+        .area-card-content h4 {
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .area-card-content h4 i {
+            color: var(--primary);
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .area-card:hover .area-card-content h4 i {
+            color: white;
+            transform: scale(1.2);
+        }
+
+        /* Why Choose Us - Accordion Style */
+        .why-choose {
+            padding: 10rem 5%;
+            background: white;
+        }
+
+        .why-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .why-image {
+            position: sticky;
+            top: 120px;
+            height: 700px;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .why-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 17, 23, 0.9) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 3rem;
+        }
+
+        .why-image-overlay h3 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-image-overlay p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .why-content h2 {
+            font-size: 3.2rem;
+            color: var(--dark);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .why-content>p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 3rem;
+        }
+
+        .why-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .why-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+        }
+
+        .why-item:hover {
+            background: white;
+            border-color: var(--primary);
+            transform: translateX(10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .why-item-number {
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-fire);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(214, 73, 51, 0.25);
+        }
+
+        .why-item-content h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .why-item-content p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 0.98rem;
+        }
+
+        /* CTA Section - Premium Full Width */
+        .cta-section {
+            position: relative;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .cta-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .cta-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cta-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.95) 0%, rgba(27, 40, 56, 0.9) 50%, rgba(214, 73, 51, 0.8) 100%);
+        }
+
+        .cta-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .cta-content h2 {
+            font-size: 3.5rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .cta-content h2 span {
+            color: var(--primary);
+        }
+
+        .cta-content p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .cta-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+
+        .cta-feature i {
+            width: 40px;
+            height: 40px;
+            background: rgba(214, 73, 51, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .cta-feature span {
+            font-weight: 600;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-phone {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-phone-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-fire);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            animation: pulse-ring 2s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(214, 73, 51, 0.5);
+            }
+
+            100% {
+                box-shadow: 0 0 0 20px rgba(214, 73, 51, 0);
+            }
+        }
+
+        .cta-phone-text {
+            color: white;
+        }
+
+        .cta-phone-text span {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.3rem;
+        }
+
+        .cta-phone-text a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .cta-phone-text a:hover {
+            color: var(--primary);
+        }
+
+        /* Premium Contact Form */
+        .cta-form-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 32px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-fire);
+        }
+
+        .cta-form h4 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .cta-form-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cta-form input,
+        .cta-form textarea,
+        .cta-form select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .cta-form input:focus,
+        .cta-form textarea:focus,
+        .cta-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(214, 73, 51, 0.2);
+        }
+
+        .cta-form input::placeholder,
+        .cta-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .cta-form select option {
+            background: var(--dark);
+            color: white;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .cta-form button {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--gradient-fire);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: none;
+            transition: all 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .cta-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(214, 73, 51, 0.4);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        .form-footer i {
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-white::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(214, 73, 51, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-white:hover::before {
+            left: 100%;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            background: var(--light);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-outline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: white;
+            transition: width 0.4s;
+            z-index: -1;
+        }
+
+        .btn-outline:hover::before {
+            width: 100%;
+        }
+
+        .btn-outline:hover {
+            color: var(--primary);
+            border-color: white;
+            transform: translateY(-4px);
+        }
+
+        .cta-right {
+            position: relative;
+        }
+
+        .cta-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cta-form-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 17, 23, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .cta-form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-form h4 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .cta-form input,
+        .cta-form textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .cta-form input:focus,
+        .cta-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-form input::placeholder,
+        .cta-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-form button {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--gradient-fire);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-form button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(214, 73, 51, 0.4);
+        }
+
+        /* Footer - Premium Design */
+        .footer {
+            background: var(--dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 0%, rgba(214, 73, 51, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 90% 100%, rgba(232, 185, 35, 0.05) 0%, transparent 30%);
+        }
+
+        .footer-top {
+            padding: 6rem 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .footer-about .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-about .logo-main {
+            font-size: 1.8rem;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-about .fca-notice {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.2rem;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.1rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(214, 73, 51, 0.3);
+        }
+
+        .footer-links h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        .footer-links ul a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-contact h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-contact-item i {
+            width: 40px;
+            height: 40px;
+            background: rgba(214, 73, 51, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-item span {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+
+        .footer-bottom {
+            padding: 2rem 5%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-bottom-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary);
+        }
+
+        .footer-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .footer-rating .stars {
+            color: var(--accent);
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .footer-rating span {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .designed-by {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .designed-by a {
+            color: var(--primary) !important;
+            font-weight: 700;
+        }
+
+        /* Mobile Navigation */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 10px;
+        }
+
+        .mobile-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* Latest Work Section */
+        .latest-work {
+            padding: 10rem 5%;
+            background: white;
+        }
+
+        .work-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .work-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .work-item {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .work-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .work-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .work-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 17, 23, 0.9) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .work-item:hover .work-overlay {
+            opacity: 1;
+        }
+
+        .work-overlay h4 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            transform: translateY(20px);
+            transition: transform 0.4s;
+        }
+
+        .work-item:hover .work-overlay h4 {
+            transform: translateY(0);
+        }
+
+        .work-overlay span {
+            color: var(--primary);
+            font-weight: 600;
+            transform: translateY(20px);
+            transition: transform 0.4s 0.1s;
+        }
+
+        .work-item:hover .work-overlay span {
+            transform: translateY(0);
+        }
+
+        /* Brochure Section */
+        .brochure-section {
+            padding: 8rem 5%;
+            background: var(--light);
+        }
+
+        .brochure-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .brochure-content h3 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .brochure-content p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .brochure-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(214, 73, 51, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 20px rgba(214, 73, 51, 0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .services-bento {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .service-card:nth-child(1) {
+                grid-column: span 3;
+            }
+
+            .service-card:nth-child(2) {
+                grid-column: span 3;
+            }
+
+            .service-card:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            .service-card:nth-child(4) {
+                grid-column: span 2;
+            }
+
+            .service-card:nth-child(5) {
+                grid-column: span 2;
+            }
+
+            .service-card:nth-child(6) {
+                grid-column: span 6;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-left {
+                padding: 8rem 5% 4rem;
+            }
+
+            .hero-right {
+                height: 400px;
+            }
+
+            .hero-right::before {
+                background: linear-gradient(to bottom, var(--secondary) 0%, transparent 30%);
+            }
+
+            .emergency-float {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin: 2rem 5%;
+            }
+
+            .hero-text h1 {
+                font-size: 3.2rem;
+            }
+
+            .about-container,
+            .why-container,
+            .brochure-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-visual {
+                order: -1;
+            }
+
+            .why-image {
+                position: relative;
+                top: 0;
+                height: 400px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .work-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .work-item:nth-child(1) {
+                grid-column: span 2;
+                height: 400px;
+            }
+
+            .reviews-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-stats {
+                position: relative;
+                top: 0;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-container {
+                grid-template-columns: 1fr;
+                padding: 3rem;
+                gap: 3rem;
+            }
+
+            .cta-content {
+                text-align: center;
+            }
+
+            .cta-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-features {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .cta-phone {
+                justify-content: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .services-bento {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+
+            .service-card {
+                grid-column: span 1 !important;
+                height: 350px;
+            }
+
+            .whatwedo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dyk-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-timeline::before {
+                left: 30px;
+            }
+
+            .process-step {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .step-content {
+                text-align: left;
+                padding-left: 80px;
+            }
+
+            .process-step:nth-child(even) .step-content {
+                order: 1;
+            }
+
+            .step-dot {
+                left: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 85%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 6rem 2rem;
+                box-shadow: -10px 0 50px rgba(0, 0, 0, 0.15);
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                gap: 1.5rem;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-cta {
+                display: none !important;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-img-main {
+                height: 400px;
+                border-radius: 0 50px 0 50px;
+            }
+
+            .about-img-float {
+                display: none;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .work-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .work-item:nth-child(1) {
+                grid-column: span 1;
+                height: 350px;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .dyk-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatwedo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+
+            .area-card {
+                height: 140px;
+            }
+
+            .area-card:nth-child(1),
+            .area-card:nth-child(7) {
+                grid-column: span 2;
+            }
+
+            .area-card-icon {
+                font-size: 2rem;
+            }
+
+            .area-card:hover .area-card-icon {
+                font-size: 2.5rem;
+            }
+
+            .finance-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .btn-white,
+            .btn-outline {
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .service-card {
+                height: 300px;
+            }
+
+            .about-experience {
+                left: 10px;
+                top: 10px;
+                padding: 1.5rem;
+            }
+
+            .about-experience .number {
+                font-size: 2.5rem;
+            }
+
+            .process-step {
+                padding-left: 0;
+            }
+
+            .step-content {
+                padding-left: 60px;
+            }
+
+            .review-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Premium Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-roof">
+                <div class="roof-shape"></div>
+                <div class="roof-base"></div>
+            </div>
+            <div class="preloader-logo">
+                <span class="trade">TRADE</span><span class="tech">TECH</span>
+            </div>
+            <div class="preloader-dots">
+                <div class="preloader-dot"></div>
+                <div class="preloader-dot"></div>
+                <div class="preloader-dot"></div>
+            </div>
+            <p class="preloader-text">Glasgow's Best Roofers</p>
+        </div>
+    </div>
+
+    <!-- Premium Custom Cursor -->
+    <div class="cursor-wrapper" id="cursorWrapper"></div>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-main"><span class="trade">TRADE</span><span class="tech">TECH</span></span>
+                <span class="logo-sub">Roofing Limited</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#work">Latest Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:01413740275" class="nav-cta"><i class="fas fa-phone"></i> 0141 374 0275</a></li>
+            </ul>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Cinematic Split -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <i class="fas fa-award"></i>
+                    <span>Glasgow's Trusted Roofers</span>
+                </div>
+                <div class="hero-text">
+                    <h1>Roofers Glasgow<span>Book A Detailed Roof Survey</span></h1>
+                    <p>Roof Replacements, Repairs, Leadwork, Roofline, Chimney Repairs & Roughcasting. When you're
+                        looking for Glasgow roofers with years of experience, look no further.</p>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4.9<span>★</span></div>
+                        <div class="stat-label">Google Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">59<span>+</span></div>
+                        <div class="stat-label">5-Star Reviews</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10<span>+</span></div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="tel:01413740275" class="btn-primary">
+                        <i class="fas fa-phone"></i> Call: 0141 374 0275
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        <i class="fas fa-clipboard-list"></i> Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="https://images.pexels.com/photos/8134820/pexels-photo-8134820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Professional Roofing Work in Glasgow" loading="eager" fetchpriority="high"
+                style="object-position: center top;">
+            <div class="emergency-float animate-float">
+                <div class="emergency-float-header">
+                    <div class="emergency-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h4>Emergency?</h4>
+                        <p>0141 374 0275</p>
+                    </div>
+                </div>
+                <a href="tel:01413740275" class="emergency-call-btn">
+                    <i class="fas fa-phone"></i> Call Now For Immediate Help
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="brands-wrapper">
+            <div class="brand-logo">
+                <img src="https://www.redland.co.uk/images/default-source/brand-logos/redland_logo.png"
+                    alt="Redland Roofing" onerror="this.parentElement.innerHTML='<span>Redland</span>'">
+            </div>
+            <div class="brand-logo">
+                <img src="https://www.cupapizarras.com/wp-content/themes/cupa/images/logo-cupa-pizarras.svg"
+                    alt="CUPA PIZARRAS" onerror="this.parentElement.innerHTML='<span>CUPA PIZARRAS</span>'">
+            </div>
+            <div class="brand-logo">
+                <img src="https://www.velux.co.uk/~/media/marketing/uk/logo/velux-logo.svg" alt="VELUX"
+                    onerror="this.parentElement.innerHTML='<span>VELUX</span>'">
+            </div>
+            <div class="brand-logo">
+                <img src="https://www.marley.co.uk/siteassets/shared/logos/marley-eternit-logo.png" alt="Marley Eternit"
+                    onerror="this.parentElement.innerHTML='<span>MARLEY</span>'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Bento Grid -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <span class="section-label"><i class="fas fa-tools"></i> Our Services</span>
+            <h2>Catering to Domestic Marketplace Across Central Scotland</h2>
+            <p>We specialise in roof installation, replacement, roofline and repairs. We have countless 5-star reviews,
+                trusted by customers nationwide to carry out the highest standard of workmanship.</p>
+        </div>
+
+        <div class="services-bento">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=90"
+                    alt="Roof Replacement Glasgow">
+                <span class="service-number">01</span>
+                <div class="service-overlay">
+                    <h3>Roof Replacements</h3>
+                    <p>Complete roof replacement services for pitched and flat roofs. We use the highest quality
+                        materials to ensure longevity and protection against Scottish weather.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=90"
+                    alt="Roof Repairs Glasgow">
+                <span class="service-number">02</span>
+                <div class="service-overlay">
+                    <h3>Roof Repairs</h3>
+                    <p>Expert emergency roof repair services. Storm damage, leaks, missing tiles - our team responds
+                        quickly.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=90"
+                    alt="Roofline Services">
+                <span class="service-number">03</span>
+                <div class="service-overlay">
+                    <h3>Roofline</h3>
+                    <p>Removal of old roofline and installation of brand new UPVC soffits, fascia, gutters and
+                        downpipes.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=90"
+                    alt="Roofing Leadwork">
+                <span class="service-number">04</span>
+                <div class="service-overlay">
+                    <h3>Roofing Leadwork</h3>
+                    <p>Professional lead flashing, valleys, and roof detail work. Essential for weatherproofing.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=90"
+                    alt="Chimney Repairs Glasgow">
+                <span class="service-number">05</span>
+                <div class="service-overlay">
+                    <h3>Chimney Repairs</h3>
+                    <p>Complete chimney repair and restoration. Repointing, rebuilding, flaunching, and cowl
+                        installation by our expert team.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=90"
+                    alt="Roughcasting Glasgow">
+                <span class="service-number">06</span>
+                <div class="service-overlay">
+                    <h3>Roughcasting</h3>
+                    <p>From removal of old roughcast to installation of modern roughcasting. Protect your walls and give
+                        your home a fresh appearance.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="whatwedo-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-hard-hat"></i> What We Do</span>
+                <h2>Roofs & Walls</h2>
+                <p>Installation and repair of roofs, roofline and roughcasting exterior of a building.</p>
+            </div>
+
+            <div class="whatwedo-grid">
+                <div class="whatwedo-card">
+                    <div class="whatwedo-icon">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=100&h=100&fit=crop&crop=top"
+                            alt="Roofing">
+                    </div>
+                    <h3>Roofing</h3>
+                    <p>Installation of new roofs and emergency repairs. We handle all types of roofing projects across
+                        Glasgow.</p>
+                </div>
+
+                <div class="whatwedo-card">
+                    <div class="whatwedo-icon">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100&h=100&fit=crop&crop=top"
+                            alt="Roofline">
+                    </div>
+                    <h3>Roofline</h3>
+                    <p>Removal of the old roofline and install of brand new UPVC soffits, fascia, gutters and downpipes.
+                    </p>
+                </div>
+
+                <div class="whatwedo-card">
+                    <div class="whatwedo-icon">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=100&h=100&fit=crop"
+                            alt="Roughcasting">
+                    </div>
+                    <h3>Roughcasting</h3>
+                    <p>From the removal of old roughcast to the installation of the new more modern roughcasting.</p>
+                </div>
+
+                <div class="whatwedo-card">
+                    <div class="whatwedo-icon">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=100&h=100&fit=crop&crop=top"
+                            alt="Chimney Work">
+                    </div>
+                    <h3>Chimney Work</h3>
+                    <p>Complete chimney services including repairs, repointing, rebuilding and cowl installation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=90"
+                    alt="Tradetech Roofing Video">
+                <div class="video-play-btn">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+            <div class="video-title">
+                <h3>Tradetech Roofing - Glasgow's Best Roofing Company</h3>
+                <p>Watch our video to learn more about our services and see our team in action</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Magazine Layout -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-visual">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=90"
+                    alt="Professional Roofing Work" class="about-img-main">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=90" alt="Roofing Team"
+                    class="about-img-float">
+                <div class="about-experience">
+                    <span class="number">10+</span>
+                    <span class="text">Years</span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-label"><i class="fas fa-info-circle"></i> About Us</span>
+                <h2>Roofing Specialist in <span>Glasgow</span></h2>
+                <p>Tradetech Roofing Limited are much more than just a roofing company. We are proudly recognised among
+                    the best roofers in Glasgow and Lanarkshire and offer outstanding value on tile roofs, slate roofs,
+                    roof repair, roofline, roughcasting and much more.</p>
+                <p>We believe in offering our customers honest and personal service with transparent pricing. We'll
+                    never give you the upsell or try to sell you something you don't need. As one of the leading roofing
+                    companies, we keep up to date with the latest roof products and align our services with the latest
+                    building regs and safety requirements.</p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Experienced Team</h4>
+                            <p>Skilled professionals dedicated to quality workmanship</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Safety First</h4>
+                            <p>Fully insured and safety compliant</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Quality Materials</h4>
+                            <p>Only the best roofing products used</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Transparent Pricing</h4>
+                            <p>No hidden costs or surprises</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn-primary">
+                    <i class="fas fa-clipboard-check"></i> Book A Detailed Survey Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Download Section -->
+    <section class="brochure-section">
+        <div class="brochure-container">
+            <div class="brochure-content">
+                <h3>Download Our Brochure...</h3>
+                <p>Want to know more about how Tradetech Roofing can help protect and improve your home? Download our
+                    comprehensive brochure with all the information you need.</p>
+                <a href="#" class="btn-primary">
+                    <i class="fas fa-file-download"></i> Download Brochure
+                </a>
+            </div>
+            <div class="brochure-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=90"
+                    alt="Roofing Brochure">
+            </div>
+        </div>
+    </section>
+
+    <!-- Did You Know Section -->
+    <section class="did-you-know">
+        <div class="dyk-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-lightbulb"></i> Did You Know?</span>
+                <h2>Educating Our Customers</h2>
+                <p>Unlike many other Glasgow roofing companies, we don't just want to advertise our services - we're
+                    here to help educate you about the roofing industry.</p>
+            </div>
+
+            <div class="dyk-grid">
+                <div class="dyk-card">
+                    <div class="dyk-number">1</div>
+                    <div class="dyk-content">
+                        <h4>Replacement Roofing Options</h4>
+                        <p>Discover the various roofing materials and styles available for your property - from slate to
+                            tile, pitched to flat.</p>
+                    </div>
+                </div>
+                <div class="dyk-card">
+                    <div class="dyk-number">2</div>
+                    <div class="dyk-content">
+                        <h4>Fascia, Soffit & Gutters</h4>
+                        <p>Did you know that Fascia, Soffit & Gutters are also known as Roofline? Learn why they're
+                            essential for your home.</p>
+                    </div>
+                </div>
+                <div class="dyk-card">
+                    <div class="dyk-number">3</div>
+                    <div class="dyk-content">
+                        <h4>Roughcasting Types</h4>
+                        <p>Explore the different types of roughcasting we offer to protect and beautify your exterior
+                            walls.</p>
+                    </div>
+                </div>
+                <div class="dyk-card">
+                    <div class="dyk-number">4</div>
+                    <div class="dyk-content">
+                        <h4>Chimney Repair Services</h4>
+                        <p>Do you have a chimney needing repair? We can help with repointing, rebuilding, and
+                            maintenance.</p>
+                    </div>
+                </div>
+                <div class="dyk-card">
+                    <div class="dyk-number">5</div>
+                    <div class="dyk-content">
+                        <h4>Importance of Leadwork</h4>
+                        <p>Roofing leadwork - do you need it? Learn why proper lead flashing is crucial for your roof.
+                        </p>
+                    </div>
+                </div>
+                <div class="dyk-card">
+                    <div class="dyk-number">6</div>
+                    <div class="dyk-content">
+                        <h4>Emergency Storm Damage</h4>
+                        <p>Storm damage? We have an emergency roof repair team ready to respond quickly to protect your
+                            home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section - Premium Showcase -->
+    <section class="reviews" id="reviews">
+        <div class="reviews-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-star"></i> Our Reviews</span>
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers across Glasgow</p>
+            </div>
+
+            <div class="reviews-showcase">
+                <div class="reviews-stats">
+                    <div class="google-logo">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="reviews-rating">4.9</div>
+                    <div class="reviews-stars">★★★★★</div>
+                    <div class="reviews-count">Based on 59 reviews</div>
+                    <div class="reviews-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Office 1, Technology House, 9 Newton Place, Glasgow
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">IM</div>
+                            <div class="reviewer-info">
+                                <h4>Ian Middleton</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"In a street behind my house I witnessed over 5 days, what appeared to be
+                            a very efficient team (Tradetech). The quality of workmanship and attention to detail was
+                            exceptional."</p>
+                        <div class="review-meta">
+                            <i class="fab fa-google"></i>
+                            <span>Posted on Google • 5 months ago</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">MG</div>
+                            <div class="reviewer-info">
+                                <h4>Mhairi Gammage</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"We had Tradetech replace our roof and gutters/downpipes and they have
+                            been excellent. Very good value for money and the team were professional throughout the
+                            entire project."</p>
+                        <div class="review-meta">
+                            <i class="fab fa-google"></i>
+                            <span>Posted on Google • 7 months ago</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">C</div>
+                            <div class="reviewer-info">
+                                <h4>Cuz</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Had Paul and his team out to fit new roof. Very professional, arrived
+                            each day promptly, kept informed throughout the process. Highly recommend their services to
+                            everyone."</p>
+                        <div class="review-meta">
+                            <i class="fab fa-google"></i>
+                            <span>Posted on Google • Last week</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">DJ</div>
+                            <div class="reviewer-info">
+                                <h4>David Jack</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="review-text">"We chose Paul on the basis of reviews on Google with some trepidation I
+                            might add. I needn't have worried - absolutely fantastic service from start to finish.
+                            Highly recommended!"</p>
+                        <div class="review-meta">
+                            <i class="fab fa-google"></i>
+                            <span>Posted on Google • 10 months ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section - Timeline Style -->
+    <section class="process">
+        <div class="process-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-tasks"></i> Our Process</span>
+                <h2>How We Work</h2>
+                <p>From initial contact to project completion, we ensure a smooth and transparent process.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">1</div>
+                        <h3>Initial Contact</h3>
+                        <p>Give us a call to discuss your roofing needs. We'll answer your questions and arrange a
+                            convenient survey time.</p>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=90"
+                            alt="Contact Us">
+                    </div>
+                    <div class="step-dot"></div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">2</div>
+                        <h3>Detailed Survey</h3>
+                        <p>Our expert will conduct a thorough roof survey, identifying all issues and discussing the
+                            best solutions for your property.</p>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=90"
+                            alt="Roof Survey">
+                    </div>
+                    <div class="step-dot"></div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">3</div>
+                        <h3>Clear Quote</h3>
+                        <p>Receive a detailed, transparent quote with no hidden costs. Finance options available if
+                            needed through Phoenix Financial.</p>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=90"
+                            alt="Quote Document">
+                    </div>
+                    <div class="step-dot"></div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">4</div>
+                        <h3>Expert Installation</h3>
+                        <p>Our skilled team completes the work efficiently, keeping you informed every step of the way
+                            until completion.</p>
+                    </div>
+                    <div class="step-visual">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=90"
+                            alt="Roof Installation">
+                    </div>
+                    <div class="step-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Work Section -->
+    <section class="latest-work" id="work">
+        <div class="work-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-images"></i> Latest Work</span>
+                <h2>Our Recent Projects</h2>
+                <p>Browse through our portfolio of completed roofing projects across Glasgow and Lanarkshire.</p>
+            </div>
+
+            <div class="work-gallery">
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=90"
+                        alt="Complete Roof Replacement">
+                    <div class="work-overlay">
+                        <h4>Complete Roof Replacement</h4>
+                        <span>Glasgow, Scotland</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=90"
+                        alt="Roofline Installation">
+                    <div class="work-overlay">
+                        <h4>Roofline Installation</h4>
+                        <span>Lanarkshire</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=90"
+                        alt="Emergency Repair">
+                    <div class="work-overlay">
+                        <h4>Emergency Roof Repair</h4>
+                        <span>East Kilbride</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=90"
+                        alt="Leadwork Project">
+                    <div class="work-overlay">
+                        <h4>Lead Flashing Work</h4>
+                        <span>Coatbridge</span>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=90"
+                        alt="Chimney Repair">
+                    <div class="work-overlay">
+                        <h4>Chimney Restoration</h4>
+                        <span>Hamilton</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="why-container">
+            <div class="why-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1000&q=90"
+                    alt="Professional Roofing Team Glasgow">
+                <div class="why-image-overlay">
+                    <h3>Glasgow's Best Roofing Company</h3>
+                    <p>Trusted by hundreds of homeowners across Central Scotland</p>
+                </div>
+            </div>
+
+            <div class="why-content">
+                <span class="section-label"><i class="fas fa-check-circle"></i> Why Choose Us</span>
+                <h2>Roofing Contractors in Glasgow You Can Trust</h2>
+                <p>Roofing contractors in Glasgow are crucial if you want to guarantee the security, durability, and
+                    caliber of your roof. Here are some benefits of working with experienced roofers like TradeTech
+                    Roofing:</p>
+
+                <div class="why-list">
+                    <div class="why-item">
+                        <div class="why-item-number">1</div>
+                        <div class="why-item-content">
+                            <h4>Experience and Knowledge</h4>
+                            <p>Our professional roofers are knowledgeable and skilled in handling all roofing
+                                requirements, from new installations to repairs and upkeep. With years of knowledge, we
+                                can provide you with the finest recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-item-number">2</div>
+                        <div class="why-item-content">
+                            <h4>Safety First Approach</h4>
+                            <p>Since roofing may be a hazardous job, experienced roofing contractors are equipped with
+                                the right tools and training to do the work in a risk-free manner.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-item-number">3</div>
+                        <div class="why-item-content">
+                            <h4>Save Time and Money</h4>
+                            <p>In the long term, hiring expert roofing contractors may save you time and money. We can
+                                assist you to avoid making expensive mistakes since we have the tools and equipment
+                                needed.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-item-number">4</div>
+                        <div class="why-item-content">
+                            <h4>High-Quality Materials</h4>
+                            <p>To guarantee that your roof and gutters are made to last and resist the severe Scottish
+                                weather, we only use the best materials and methods.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-item-number">5</div>
+                        <div class="why-item-content">
+                            <h4>Customized Solutions</h4>
+                            <p>We collaborate closely with you to comprehend your unique demands and offer you a
+                                solution that satisfies both your needs and your budget.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-item-number">6</div>
+                        <div class="why-item-content">
+                            <h4>Satisfaction Guarantee</h4>
+                            <p>We are dedicated to earning your satisfaction and stand by the caliber of our work. Your
+                                happiness is our priority.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section class="areas" id="areas">
+        <div class="areas-container">
+            <div class="section-header">
+                <span class="section-label"><i class="fas fa-map-marked-alt"></i> Areas We Cover</span>
+                <h2>Serving Glasgow & Central Scotland</h2>
+                <p>We provide roofing services across Glasgow, Lanarkshire, and surrounding areas.</p>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-city"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Glasgow</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #0f3057 0%, #00587a 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Lanarkshire</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #2d4059 0%, #3d5a80 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-home"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> East Kilbride</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1b262c 0%, #0f4c75 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Hamilton</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #222831 0%, #393e46 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-building"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Coatbridge</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-warehouse"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Moodiesburn</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-store"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Airdrie</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #1f4068 0%, #162447 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-industry"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Motherwell</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-church"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Paisley</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #243b55 0%, #141e30 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-water"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Clydebank</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg" style="background: linear-gradient(135deg, #232526 0%, #414345 100%);">
+                    </div>
+                    <div class="area-card-icon"><i class="fas fa-tree"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Rutherglen</h4>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-card-bg"
+                        style="background: linear-gradient(135deg, #283c86 0%, #45a247 50%, #283c86 100%);"></div>
+                    <div class="area-card-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="area-card-content">
+                        <h4><i class="fas fa-map-marker-alt"></i> Cambuslang</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Premium Contact Form -->
+    <section class="cta-section" id="contact">
+        <div class="cta-bg">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=90"
+                alt="Contact Tradetech Roofing">
+        </div>
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Ready to <span>Get Started?</span></h2>
+                <p>Contact Tradetech Roofing today for a free consultation and detailed roof survey. We'll provide you
+                    with a transparent quote and expert advice for your roofing project.</p>
+
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Free Roof Survey</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>No Obligation Quote</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Finance Available</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check"></i>
+                        <span>10+ Years Experience</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#" class="btn-white">
+                        <i class="fas fa-file-download"></i> Download Brochure
+                    </a>
+                </div>
+
+                <div class="cta-phone">
+                    <div class="cta-phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="cta-phone-text">
+                        <span>Call us now for immediate assistance</span>
+                        <a href="tel:01413740275">0141 374 0275</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-form-wrapper">
+                <form class="cta-form">
+                    <h4>Request a Free Quote</h4>
+                    <p class="cta-form-subtitle">Fill out the form and we'll get back to you within 24 hours</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="07XXX XXXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Service Required</label>
+                        <select required>
+                            <option value="">Select a service...</option>
+                            <option value="roof-replacement">Roof Replacement</option>
+                            <option value="roof-repair">Roof Repairs</option>
+                            <option value="roofline">Roofline</option>
+                            <option value="chimney">Chimney Repairs</option>
+                            <option value="roughcasting">Roughcasting</option>
+                            <option value="leadwork">Leadwork</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea placeholder="Tell us about your project..." rows="3"></textarea>
+                    </div>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i> Send Request
+                    </button>
+
+                    <div class="form-footer">
+                        <p><i class="fas fa-lock"></i> Your information is secure and will never be shared</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Premium Design -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <span class="logo-main"><span class="trade">TRADE</span><span class="tech"
+                                style="color: white;">TECH</span></span>
+                        <span class="logo-sub" style="color: rgba(255,255,255,0.5);">Roofing Limited</span>
+                    </a>
+                    <p>TradeTech Roofing is a trustworthy roofing company in Glasgow and the surrounding areas. We are a
+                        team of skilled and professional roofers committed to providing excellent work and excellent
+                        customer service.</p>
+                    <div class="fca-notice">
+                        <strong>Tradetech Roofing Limited</strong> is an Introducer Appointed Representative (Financial
+                        Services Register No. 1018996) of Phoenix Financial Consultants Limited (Phoenix). Phoenix is a
+                        credit broker, not a lender.
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#work">Latest Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Popular Services</h4>
+                    <ul>
+                        <li><a href="#">Roof Repairs</a></li>
+                        <li><a href="#">Roofing Leadwork</a></li>
+                        <li><a href="#">Roof Replacements</a></li>
+                        <li><a href="#">Roofline</a></li>
+                        <li><a href="#">Chimney Repairs</a></li>
+                        <li><a href="#">Roughcasting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Plot 4, Bridgend Industrial Estate, 2 Gortferry Road, Moodlesburn, Glasgow, G69 0JD</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0141 374 0275</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@tradetechroofing.co.uk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>© 2025 Tradetech Roofing Limited. All Rights Reserved. | <a href="#">Privacy & Cookies Policy</a> |
+                    <a href="#">Terms & Conditions</a></p>
+                <p class="designed-by">Designed by <a href="#">Mahedi</a></p>
+                <div class="footer-rating">
+                    <span class="stars">★★★★★</span>
+                    <span>5 Rating</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('preloader').classList.add('loaded');
+            }, 1800);
+        });
+
+        // Ultra Premium Magnetic Cursor
+        const cursor = document.getElementById('cursor');
+        const cursorDot = document.getElementById('cursorDot');
+        const cursorWrapper = document.getElementById('cursorWrapper');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+        let lastX = 0, lastY = 0;
+        let trailCounter = 0;
+
+        if (window.innerWidth > 768) {
+            // Smooth cursor movement with glow trail
+            document.addEventListener('mousemove', function (e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+
+                // Create glow trail on movement
+                trailCounter++;
+                if (trailCounter % 3 === 0) {
+                    const distance = Math.sqrt(Math.pow(mouseX - lastX, 2) + Math.pow(mouseY - lastY, 2));
+                    if (distance > 10) {
+                        const trail = document.createElement('div');
+                        trail.className = 'cursor-glow-trail';
+                        trail.style.left = mouseX + 'px';
+                        trail.style.top = mouseY + 'px';
+                        cursorWrapper.appendChild(trail);
+                        setTimeout(() => trail.remove(), 700);
+                        lastX = mouseX;
+                        lastY = mouseY;
+                    }
+                }
+            });
+
+            // Animate cursor with smooth lag
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.12;
+                cursorY += (mouseY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Add hover effect on interactive elements
+            const hoverElements = document.querySelectorAll('a, button, .service-card, .review-card, .dyk-card, .whatwedo-card, .area-card, .work-item, .why-item, .feature-item, input, textarea, select');
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    cursorDot.classList.add('hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    cursorDot.classList.remove('hover');
+                });
+            });
+
+            // Premium burst effect on click
+            document.addEventListener('click', function (e) {
+                cursor.classList.add('clicking');
+                setTimeout(() => cursor.classList.remove('clicking'), 200);
+
+                // Create burst particles
+                const burst = document.createElement('div');
+                burst.className = 'cursor-burst';
+                burst.style.left = e.clientX + 'px';
+                burst.style.top = e.clientY + 'px';
+
+                for (let i = 0; i < 8; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'cursor-burst-particle';
+                    burst.appendChild(particle);
+                }
+
+                cursorWrapper.appendChild(burst);
+                setTimeout(() => burst.remove(), 900);
+
+                // Create expanding rings
+                const ring = document.createElement('div');
+                ring.className = 'cursor-ring';
+                ring.style.left = e.clientX + 'px';
+                ring.style.top = e.clientY + 'px';
+                cursorWrapper.appendChild(ring);
+
+                const ringSecondary = document.createElement('div');
+                ringSecondary.className = 'cursor-ring-secondary';
+                ringSecondary.style.left = e.clientX + 'px';
+                ringSecondary.style.top = e.clientY + 'px';
+                cursorWrapper.appendChild(ringSecondary);
+
+                setTimeout(() => {
+                    ring.remove();
+                    ringSecondary.remove();
+                }, 1000);
+            });
+        } else {
+            cursor.style.display = 'none';
+            cursorDot.style.display = 'none';
+            document.body.style.cursor = 'auto';
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const navHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = target.offsetTop - navHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu if open
+                        document.getElementById('navLinks').classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Fade-in Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .review-card, .process-step, .area-card, .why-item, .dyk-card, .work-item, .whatwedo-card, .feature-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+            observer.observe(el);
+        });
+
+        // Counter Animation for Stats
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 40;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.innerHTML = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.innerHTML = Math.floor(current) + suffix;
+                }
+            }, 40);
+        }
+
+        // Animate stats when in view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const text = stat.textContent;
+                        if (text.includes('4.9')) {
+                            stat.innerHTML = '4.9<span>★</span>';
+                        } else if (text.includes('59')) {
+                            animateCounter(stat, 59, '<span>+</span>');
+                        } else if (text.includes('10')) {
+                            animateCounter(stat, 10, '<span>+</span>');
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+
+        // Form submission handler
+        const ctaForm = document.querySelector('.cta-form');
+        if (ctaForm) {
+            ctaForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your enquiry! We will get back to you shortly.');
+                this.reset();
+            });
+        }
+
+        // Remove parallax effect - hero image shows instantly without animation
+    </script>
+</body>
+
+</html>
